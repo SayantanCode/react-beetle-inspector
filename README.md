@@ -1,4 +1,4 @@
-# 🕵️‍♂️ React Dev Inspector
+# 🐞 React Beetle Inspector
 
 A powerful debugging tool to help React developers quickly detect:
 - 🔁 Unnecessary re-renders
@@ -9,21 +9,21 @@ A powerful debugging tool to help React developers quickly detect:
 ## 📦 Installation
 
 ```bash
-npm install react-dev-inspector
+npm install react-beetle-inspector
 ```
 
 ## ⚙️ Setup
 ### 1. Patch fetch or axios globally (once in your root file)
 ```jsx
 // main.jsx or App.jsx or index.js
-import { patchGlobalFetch, patchAxiosInstance } from "react-dev-inspector";
+import { patchGlobalFetch, patchAxiosInstance } from "react-beetle-inspector";
 
 patchGlobalFetch(); // log all API calls from fetch
 patchAxiosInstance(); // log all API calls from axios
 ```
 ### 2. Use useWhyRender to track unnecessary renders
 ```jsx
-import { useWhyRender } from "react-dev-inspector";
+import { useWhyRender } from "react-beetle-inspector";
 
 const MyComponent = (props) => {
   useWhyRender("MyComponent", props);
@@ -36,7 +36,7 @@ const MyComponent = (props) => {
 
 ### 3. Add the Developer Overlay UI
 ```jsx
-import { DebugOverlay } from "react-dev-inspector";
+import { DebugOverlay } from "react-beetle-inspector";
 
 const App = () => {
   return (
@@ -61,7 +61,7 @@ const App = () => {
 
 Returns render counts of all tracked components.
 ```jsx
-import { getRenderStats } from "react-dev-inspector";
+import { getRenderStats } from "react-beetle-inspector";
 
 console.log(getRenderStats()); // [ ['ComponentA', 10], ['ComponentB', 8], ... ]
 ```
@@ -69,7 +69,7 @@ console.log(getRenderStats()); // [ ['ComponentA', 10], ['ComponentB', 8], ... ]
 
 Subscribe to the internal log of all API calls.
 ```jsx
-import { subscribeToApiLogs } from "react-dev-inspector";
+import { subscribeToApiLogs } from "react-beetle-inspector";
 
 const unsub = subscribeToApiLogs((logs) => {
   console.log("API logs:", logs);

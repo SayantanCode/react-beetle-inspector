@@ -1,5 +1,5 @@
 {
-  "name": "react-dev-inspector",
+  "name": "react-beetle-inspector",
   "version": "1.0.0",
   "description": "Debug re-renders, API calls and performance issues in React apps with an overlay.",
   "main": "dist/index.cjs.js",
