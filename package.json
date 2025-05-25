@@ -1,0 +1,36 @@
+{
+  "name": "react-dev-inspector",
+  "version": "1.0.0",
+  "description": "Debug re-renders, API calls and performance issues in React apps with an overlay.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "keywords": [
+    "react",
+    "debug",
+    "performance",
+    "overlay",
+    "api-logger"
+  ],
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.19",
+    "vite-plugin-dts": "^3.9.1"
+  },
+  "license": "MIT",
+  "author": "Sayantan Chakraborty",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sayantan-chakraborty/react-dev-inspector"
+  }
+}
