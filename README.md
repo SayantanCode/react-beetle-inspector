@@ -17,10 +17,11 @@ npm install react-beetle-inspector
 ```jsx
 // main.jsx or App.jsx or index.js
 import { patchGlobalFetch, patchAxiosInstance } from "react-beetle-inspector";
-
+import axios from "axios";
 patchGlobalFetch(); // log all API calls from fetch
-patchAxiosInstance(); // log all API calls from axios
+patchAxiosInstance(axios); // log all API calls from axios instance
 ```
+>> NOTE: You can also pass an axios instance to patchAxiosInstance to log API calls from a specific instance.
 ### 2. Use useWhyRender to track unnecessary renders
 ```jsx
 import { useWhyRender } from "react-beetle-inspector";
@@ -94,7 +95,9 @@ if (import.meta.env.MODE === "development") {
 - 🧩 Easy Draggable Debug Overlay
 
 ## 📝 Changelog
-
+- v1.0.1:
+    - Fixed: Missing export for patchAxiosInstance in `index.js`
+    - Fixed: Corrected pathAxiosInstance command in `README.md`
 - v1.0.0: Initial release
 
 ## 📌 Roadmap
